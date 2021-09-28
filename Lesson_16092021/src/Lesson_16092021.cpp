@@ -24,6 +24,21 @@ int countWords(string x) {
     return Num;
 }
 
+void countWord(string s, char c){
+	int k = 0;
+	for (int i = 0; i < s.length(); i++)
+		if (s[i] == c && s[i-1] == ' ')
+			k++;
+	if (k)
+			//Количество слов, начинающихся на букву
+	        cout << "Количество слов, начинающихся на букву " << c << ": " << k << endl;
+	    else
+	    	//Искомых слов не найдено!
+	        cout << "Искомых слов не найдено!" << endl;
+		//Процентное содержание слов на букву
+	    cout << "Процентное содержание слов на букву " << c << ": " << (double)k*100/countWords(s) << " %" << endl;
+}
+
 int main(){
     setlocale(LC_ALL, "ru");
     char y = 'у', p= 'п';
@@ -41,24 +56,9 @@ int main(){
     F.close();
     stringstream str(s);
     cout << "Общее количество слов: " << countWords(s) << endl;
-    int k = 0;
-    for (int i = 1; i < s.length(); i++)
-        if (s[i] == y && s[i - 1] == ' ')
-            k++;
-    if (k)
-        cout << "Количество слов, начинающихся на букву У: " << k << endl;
-    else
-        cout << "Искомых слов не найдено!" << endl;
-    cout << "Процентное содержание слов на букву У: " << (double)k*100/countWords(s) << " %" << endl;
-    k = 0;
-    for (int i = 1; i < s.length(); i++)
-        if (s[i] == p && s[i - 1] == ' ')
-            k++;
-    if (k)
-        cout << "Количество слов, начинающихся на букву П: " << k << endl;
-    else
-        cout << "Искомых слов не найдено!" << endl;
-    cout << "Процентное содержание слов на букву П: " << (double)k*100/countWords(s) << " %" << endl;
+
+    countWord(s,y);
+    countWord(s,p);
 
     cin.get();
     system("pause");
