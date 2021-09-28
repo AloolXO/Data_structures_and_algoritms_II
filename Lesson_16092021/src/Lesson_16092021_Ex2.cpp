@@ -1,5 +1,5 @@
 //============================================================================
-// Name        : Lesson_16092021.cpp
+// Name        : Lesson_16092021_Ex2 (Words).cpp
 // Author      : AloolXO
 // Version     :
 // Copyright   : Your copyright notice
