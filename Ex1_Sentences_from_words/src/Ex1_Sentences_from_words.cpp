@@ -31,11 +31,17 @@ int countWords(string x) {
     return Num;
 }
 
-void removeDupWord(string str) {
+/*string removeDupWord(string str) {
    string word = "";
+   string *sentens = new string[countWords(str)];
+   int k = 0;
    for (auto x : str) {
        if (x == ' ' || x == ',' || x == '.' || x == 'Ц') {
-           cout << word << endl;
+           //cout << word << endl;
+           if (word != " "){
+        	   sentens[k] = word;
+        	   k++;
+           }
            word = "";
        }
        else {
@@ -43,11 +49,12 @@ void removeDupWord(string str) {
        }
    }
    //cout << word << endl;
-}
+   return sentens;
+}*/
 
 int main() {
 	setlocale(LC_ALL, "ru");
-	string s1, s2;
+	string s1, s2, *sentens;
 	cout << "»сходный текст находитьс€ в файле Input.txt" << endl;
 	ifstream F;
 	F.open("C://University/2_course/3_semester/Data_structures_and_algoritms_II/Ex1_Sentences_from_words/input.txt");
@@ -66,8 +73,8 @@ int main() {
 	TwoSentens.sentens_1=s1;
 	TwoSentens.sentens_2=s2;*/
 
-	/*string *sentens1 = new string[countWords(s1)];
-	string *sentens2 = new string[countWords(s2)];*/
+	//string *sentens1 = new string[countWords(s1)];
+	//string *sentens2 = new string[countWords(s2)];
 
 	//vector<string> sentens1;
 
@@ -87,5 +94,25 @@ int main() {
 
 	for(int i = 0; i < sentens1.size(); i++)
 	    cout << sentens1[i] << endl;*/
-	removeDupWord(s1);
+
+	string word = "";
+	int count = countWords(s1);
+	sentens = new string[count];
+	int k = 0;
+	for (auto x : s1) {
+	   if (x == ' ' || x == ',' || x == '.' || x == 'Ц') {
+		   //cout << word << endl;
+		   if (word != " "){
+			   sentens[k] = word;
+			   k++;
+		   }
+		   word = "";
+	   }
+	   else {
+		   word = word + x;
+	   }
+	}
+	int length = sentens->size();
+	for(int i = 0; i < length; i++)
+		cout << sentens[i] << endl;
 }
