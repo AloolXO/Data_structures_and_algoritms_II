@@ -32,7 +32,7 @@ int main() {
                     t++;
                     break;
                 } else if (all[t] == '\n') {
-                    t += 2;
+                    t +=2;
                     break;
                 } else {
                     num += all[t];
