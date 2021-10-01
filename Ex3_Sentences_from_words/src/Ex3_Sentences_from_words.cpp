@@ -32,7 +32,7 @@ int main() {
                     t++;
                     break;
                 } else if (all[t] == '\n') {
-                    t +=2;
+                    t += 2;
                     break;
                 } else {
                     num += all[t];
@@ -43,7 +43,7 @@ int main() {
             num = "";
         }
     }
-    cout << "Èçíà÷àëüíàÿ ìàòðèöà èç ôàéëà Input.txt:" << endl;
+    cout << "Ð˜Ð·Ð½Ð°Ñ‡Ð°Ð»ÑŒÐ½Ð°Ñ Ð¼Ð°Ñ‚Ñ€Ð¸Ñ†Ð° Ð¸Ð· Ñ„Ð°Ð¹Ð»Ð° Input.txt:" << endl;
     for (int i = 0; i < 5; i++) {
         for (int j = 0; j < 5; j++)
             cout << "\t" << arr[i][j] << " ";
@@ -55,7 +55,7 @@ int main() {
              arrT[i][j] = arr[j][i];
         }
     }
-    cout << endl << "Òðàíñïîíèðîâàííàÿ ìàòðèöà:" << endl;
+    cout << endl << "Ð¢Ñ€Ð°Ð½ÑÐ¿Ð¾Ð½Ð¸Ñ€Ð¾Ð²Ð°Ð½Ð½Ð°Ñ Ð¼Ð°Ñ‚Ñ€Ð¸Ñ†Ð°:" << endl;
     for (int i = 0; i < 5; i++) {
         for (int j = 0; j < 5; j++)
             cout << "\t" << arrT[i][j] << " ";
