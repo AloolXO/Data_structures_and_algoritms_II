@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/cygdrive/c/University/2_course/3_semester/Data_structures_and_algoritms_II/Ex5_Very_long_whole_and_Class/VLW.h
+
+/cygdrive/c/University/2_course/3_semester/Data_structures_and_algoritms_II/Ex5_Very_long_whole_and_Class/main.cpp
+iostream
+-
+VLW.h
+/cygdrive/c/University/2_course/3_semester/Data_structures_and_algoritms_II/Ex5_Very_long_whole_and_Class/VLW.h
+
