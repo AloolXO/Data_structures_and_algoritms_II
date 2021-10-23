@@ -5,70 +5,128 @@
 #ifndef EX5_VERY_LONG_WHOLE_AND_CLASS_VLW_H
 #define EX5_VERY_LONG_WHOLE_AND_CLASS_VLW_H
 
+
+
 using namespace std;
 
 class VLW {
-public:
-
-    void input();
-    void output();
-    void get_str();
-    void Ex5_0();
-
-    ~VLW();
-
-private:
 
     std::string s;
-    unsigned int *p_darr = new unsigned int[s.length()];
-    unsigned int *Ex5_0_arr = new unsigned int[s.length()+1];
+    vector<int> p_darr;
+    int *Ex5_0_arr = new int[size(s)+1];
+    int Ex5_1_count = 0;
+    int n;
+
+public:
+
+    void output();
+    void Ex5_0();
+    void Ex5_1();
+    void Ex5_2();
+
+    VLW(std::string);
+    ~VLW();
 
 };
 
 VLW::~VLW() {
-    cout << "Deleting Very long whole (VLW)";
-    delete [] p_darr;
+    cout << "\tDeleting Very long whole (VLW)";
+    delete [] Ex5_0_arr;
 }
 
-void VLW::input() {
+VLW::VLW(std::string str) {
+    s = str;
     for (int i = 0; i < s.length() ; i++) {
-        p_darr[i] = (s[i]-'0');
+        p_darr.push_back(s[i]-'0');
     }
 }
 
 void VLW::output() {
     cout << "\nVery long whole: " << endl;
-    for (int i = 0; i < s.length() ; i++)
-        cout<<p_darr[i]<<" ";
+    for (int i = 0; i < p_darr.size() ; i++)
+        cout << p_darr[i] << " ";
     cout << endl;
-}
-
-void VLW::get_str() {
-    cout << "Write the very long whole: ";
-    cin >> s;
 }
 
 void VLW::Ex5_0() {
-    Ex5_0_arr = p_darr;
 
-    if (p_darr[0] = 9){
+    s[0] == '9' ? n = s.length()+1 : n = s.size();
+
+    for(int i = 0; i < n; i++)
+        Ex5_0_arr[i] = s[i]-'0';
+
+    if (Ex5_0_arr[0] == 9){
         Ex5_0_arr[0] = 1;
-        for (int i = 1; i < s.length()+1; i++)
+        for (int i = 1; i < n; i++)
             Ex5_0_arr[i] = 0;
+        goto end;
     }
 
-    for (int i = s.length()+1; i >= 0; i--) {
-        if(Ex5_0_arr[i] != 9){
-            Ex5_0_arr[i]++;
-            break;
+    for (int i = n; i > 0; i--) {
+        if(Ex5_0_arr[i-1] != 9){
+            Ex5_0_arr[i-1] += 1;
+            goto end;
         }
         else
-            Ex5_0_arr[i] = 0;
+            Ex5_0_arr[i-1] = 0;
     }
-    cout << "\nAnswer for Ex.5-0 (variant for all students): " << endl;
-    for (int i = 0; i < s.length()+1 ; i++)
-        cout<<Ex5_0_arr[i]<<" ";
-    cout << endl;
+    end:
+        cout << "\nAnswer for Ex.5-0 (variant for all students): " << endl;
+        for (int i = 0; i < n ; i++)
+            cout << Ex5_0_arr[i] << " ";
+        cout << endl;
+}
+
+void VLW::Ex5_1() {
+
+    for(int i = 0; i < size(s); i++){
+        if (p_darr[i] == 2 && p_darr[i+1] == 2 && i+1 != size(s)-1){
+            while (p_darr[i] == 2)
+                i++;
+            Ex5_1_count++;
+        }
+    }
+
+    cout << "\nAnswer for Ex.5-1 (variant №15): " << endl;
+    cout << Ex5_1_count << endl;
+}
+
+void VLW::Ex5_2() {
+    if (size(s) <= 20) {
+        vector<int> result;
+        unsigned long long int n=0;
+        for(int i=0; i < size(s); i++)
+        {
+            if ( s[i] != '0') {
+                n *= 10;
+                n += (s[i] - '0');
+            } else {
+                n *= 10;
+            }
+        }
+        cout << "\n" << "\nAnswer for Ex.5-2 (variant №15): ";
+        cout <<endl << n << " = 1";
+        int i = 2;
+        while (n > 1){
+            if (n % i == 0){
+                result.push_back(i);
+                n /= i;
+            }
+            i++;
+        }
+        for (int i = 0; i < size(result); i++)
+            cout << " * " << result[i];
+        cout << endl;
+    }
+    else/*{
+        vector<int> whole;
+        vector<int> result;
+        for(int i = 0; i < s.length(); i++)
+            whole.push_back(s[i]);
+
+    }*/
+        cout << "Exit 1" << endl;
+
 }
 
 #endif //EX5_VERY_LONG_WHOLE_AND_CLASS_VLW_H

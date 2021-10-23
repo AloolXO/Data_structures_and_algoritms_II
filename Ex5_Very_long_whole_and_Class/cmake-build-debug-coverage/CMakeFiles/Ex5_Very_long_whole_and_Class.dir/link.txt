@@ -1,0 +1,1 @@
+/usr/bin/c++.exe --coverage -g -Wl,--enable-auto-import CMakeFiles/Ex5_Very_long_whole_and_Class.dir/main.cpp.o -o Ex5_Very_long_whole_and_Class.exe -Wl,--out-implib,libEx5_Very_long_whole_and_Class.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
