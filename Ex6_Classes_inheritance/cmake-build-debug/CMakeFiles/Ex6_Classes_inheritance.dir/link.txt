@@ -1,0 +1,1 @@
+/usr/bin/c++.exe -g -Wl,--enable-auto-import CMakeFiles/Ex6_Classes_inheritance.dir/main.cpp.o -o Ex6_Classes_inheritance.exe -Wl,--out-implib,libEx6_Classes_inheritance.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
