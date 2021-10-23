@@ -43,7 +43,7 @@ int main() {
             num = "";
         }
     }
-    cout << "Ğ˜Ğ·Ğ½Ğ°Ñ‡Ğ°Ğ»ÑŒĞ½Ğ°Ñ Ğ¼Ğ°Ñ‚Ñ€Ğ¸Ñ†Ğ° Ğ¸Ğ· Ñ„Ğ°Ğ¹Ğ»Ğ° Input.txt:" << endl;
+    cout << "Èçíà÷àëüíàÿ ìàòğèöà èç ôàéëà Input.txt: " << endl;
     for (int i = 0; i < 5; i++) {
         for (int j = 0; j < 5; j++)
             cout << "\t" << arr[i][j] << " ";
@@ -55,7 +55,7 @@ int main() {
              arrT[i][j] = arr[j][i];
         }
     }
-    cout << endl << "Ğ¢Ñ€Ğ°Ğ½ÑĞ¿Ğ¾Ğ½Ğ¸Ñ€Ğ¾Ğ²Ğ°Ğ½Ğ½Ğ°Ñ Ğ¼Ğ°Ñ‚Ñ€Ğ¸Ñ†Ğ°:" << endl;
+    cout << endl << "Òğàíñïîíèğîâàííàÿ ìàòğèöà: " << endl;
     for (int i = 0; i < 5; i++) {
         for (int j = 0; j < 5; j++)
             cout << "\t" << arrT[i][j] << " ";
