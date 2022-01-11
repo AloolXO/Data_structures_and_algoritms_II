@@ -1,0 +1,3 @@
+/cygdrive/c/University/2_course/3_semester/Data_structures_and_algoritms_II/Ex4_Files_2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/cygdrive/c/University/2_course/3_semester/Data_structures_and_algoritms_II/Ex4_Files_2/cmake-build-debug/CMakeFiles/edit_cache.dir
+/cygdrive/c/University/2_course/3_semester/Data_structures_and_algoritms_II/Ex4_Files_2/cmake-build-debug/CMakeFiles/Ex4_Files_2.dir
